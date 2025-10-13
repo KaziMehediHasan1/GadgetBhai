@@ -4,7 +4,7 @@ import CommonWrapper from "../CommonWrapper";
 const Navbar = () => {
   return (
     <CommonWrapper>
-      <div className="bg-black">Navbar</div>
+      <div className="bg-primary">Navbar</div>
     </CommonWrapper>
   );
 };

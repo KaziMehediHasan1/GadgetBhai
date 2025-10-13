@@ -1,9 +1,9 @@
+@import url("@fortawesome/fontawesome-svg-core/styles.css");
 @import "tailwindcss";
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
-   --color-brand-primary: #db4444; 
+  --color-brand-primary: #db4444;
 }
 
 @theme inline {
@@ -11,7 +11,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --color-primary:var( --color-brand-primary)
+  --color-primary: var(--color-brand-primary);
 }
 
 @media (prefers-color-scheme: dark) {

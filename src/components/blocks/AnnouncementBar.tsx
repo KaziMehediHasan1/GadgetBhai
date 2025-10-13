@@ -10,6 +10,7 @@ const AnnouncementBar = () => {
   return (
     <div className="bg-black py-2 text-xs sm:text-sm">
       <section className="w-[95%] max-w-7xl mx-auto flex items-center justify-center sm:justify-between">
+        
         <div className="flex items-center justify-center sm:justify-start gap-x-4">
           <p className="text-white text-center ">
             Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!

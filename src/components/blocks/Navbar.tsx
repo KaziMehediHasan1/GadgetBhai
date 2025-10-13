@@ -1,11 +1,15 @@
 import React from "react";
 import CommonWrapper from "../CommonWrapper";
+import AnnouncementBar from "./AnnouncementBar";
 
 const Navbar = () => {
   return (
-    <CommonWrapper>
-      <div className="bg-primary">Navbar</div>
-    </CommonWrapper>
+    <>
+      <AnnouncementBar />
+      <CommonWrapper>
+        <div className="bg-primary">Navbar</div>
+      </CommonWrapper>
+    </>
   );
 };
 

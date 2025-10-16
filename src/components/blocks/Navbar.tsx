@@ -10,6 +10,7 @@ import {
   CiShoppingCart,
   CiSearch,
 } from "react-icons/ci";
+import { TfiClose } from "react-icons/tfi";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState<boolean>(false);
@@ -22,7 +23,7 @@ const Navbar = () => {
         <CommonWrapper>
           <div className="flex items-center justify-between pt-5 pb-3">
             <div>
-              <Link href="/" className="text-xl font-semibold">
+              <Link href="/" className="text-xl sm:text-2xl font-semibold">
                 GadgetBhai
               </Link>
             </div>
@@ -66,23 +67,35 @@ const Navbar = () => {
               </div>
 
               {/* Mobile Device */}
-              
+
               <button
-                onClick={() => setToggle(true)}
+                onClick={() => setToggle(!toggle)}
                 className="block lg:hidden"
               >
-                <CiMenuBurger className="text-xl sm:text-2xl" />
+                {toggle ? (
+                  <TfiClose className="text-xl sm:text-2xl" />
+                ) : (
+                  <CiMenuBurger className="text-xl sm:text-2xl" />
+                )}
               </button>
-
-              {
-                toggle && <section>
-                  hiiii
-                </section>
-              }
             </section>
           </div>
         </CommonWrapper>
       </div>
+      {/* Mobile menu */}
+      {toggle && (
+        <section className="h-screen w-full z-20 flex flex-col gap-5 p-6 bg-black lg:hidden">
+          {NAV_LINKS.map((link) => (
+            <Link
+              key={link.id}
+              href={link.href}
+              className=" text-white text-sm sm:text-xl font-medium hover:text-red-500 transition-colors w-fit"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </section>
+      )}
     </>
   );
 };

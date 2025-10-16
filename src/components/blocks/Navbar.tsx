@@ -89,7 +89,7 @@ const Navbar = () => {
             <Link
               key={link.id}
               href={link.href}
-              className=" text-white text-sm sm:text-xl font-medium hover:text-red-500 transition-colors w-fit"
+              className=" text-white text-sm sm:text-xl font-medium hover:text-red-500 transition-colors"
             >
               {link.label}
             </Link>
